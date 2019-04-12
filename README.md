@@ -41,6 +41,17 @@ fastlane match enterprise
 
 For more information open [fastlane match git repo](https://docs.fastlane.tools/actions/match/)
 
+### 手动加密、解密
+```
+#加密 
+openssl aes-256-cbc -k "passphrase" -in "distribution.cer" -out "jiami_distribution.cer" -a -e 
+
+#解密 
+openssl aes-256-cbc -k "passphrase" -in "CNW4VUR734.cer" -out "distribution.cer" -a -d 
+
+```
+- [reference:Fastlane 证书管道里（二）](https://juejin.im/post/5b1f1cf6f265da6e0b7004a8)
+
 ### Content
 
 #### certs
